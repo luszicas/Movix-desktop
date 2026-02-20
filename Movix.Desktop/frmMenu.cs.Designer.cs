@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dataGridView1 = new DataGridView();
             btnNovo = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,20 +47,19 @@
             // 
             dataGridView1.BackgroundColor = Color.DimGray;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(59, 132);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(52, 99);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(809, 452);
+            dataGridView1.Size = new Size(708, 339);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btnNovo
             // 
             btnNovo.BorderRadius = 10;
-            btnNovo.CustomizableEdges = customizableEdges7;
+            btnNovo.CustomizableEdges = customizableEdges1;
             btnNovo.DisabledState.BorderColor = Color.DarkGray;
             btnNovo.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNovo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -68,11 +67,10 @@
             btnNovo.FillColor = Color.MidnightBlue;
             btnNovo.Font = new Font("Segoe UI", 9F);
             btnNovo.ForeColor = Color.White;
-            btnNovo.Location = new Point(728, 52);
-            btnNovo.Margin = new Padding(3, 4, 3, 4);
+            btnNovo.Location = new Point(637, 39);
             btnNovo.Name = "btnNovo";
-            btnNovo.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnNovo.Size = new Size(141, 60);
+            btnNovo.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnNovo.Size = new Size(123, 45);
             btnNovo.TabIndex = 1;
             btnNovo.Text = "+ Novo Filme";
             btnNovo.Click += btnNovo_Click;
@@ -82,10 +80,9 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 10F);
             guna2HtmlLabel1.ForeColor = SystemColors.Highlight;
-            guna2HtmlLabel1.Location = new Point(59, 37);
-            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel1.Location = new Point(52, 28);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(112, 25);
+            guna2HtmlLabel1.Size = new Size(86, 19);
             guna2HtmlLabel1.TabIndex = 2;
             guna2HtmlLabel1.Text = "Administração";
             // 
@@ -94,53 +91,58 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 20F);
             guna2HtmlLabel2.ForeColor = Color.Azure;
-            guna2HtmlLabel2.Location = new Point(59, 71);
-            guna2HtmlLabel2.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel2.Location = new Point(52, 53);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(94, 47);
+            guna2HtmlLabel2.Size = new Size(78, 39);
             guna2HtmlLabel2.TabIndex = 3;
             guna2HtmlLabel2.Text = "Filmes";
             // 
             // btnEditar
             // 
-            btnEditar.CustomizableEdges = customizableEdges9;
+            btnEditar.BorderRadius = 10;
+            btnEditar.CustomizableEdges = customizableEdges3;
             btnEditar.DisabledState.BorderColor = Color.DarkGray;
             btnEditar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEditar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnEditar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEditar.FillColor = Color.MidnightBlue;
             btnEditar.Font = new Font("Segoe UI", 9F);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(578, 52);
+            btnEditar.Location = new Point(506, 39);
+            btnEditar.Margin = new Padding(3, 2, 3, 2);
             btnEditar.Name = "btnEditar";
-            btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnEditar.Size = new Size(129, 56);
+            btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnEditar.Size = new Size(113, 42);
             btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
-            btnExcluir.CustomizableEdges = customizableEdges11;
+            btnExcluir.BorderRadius = 10;
+            btnExcluir.CustomizableEdges = customizableEdges5;
             btnExcluir.DisabledState.BorderColor = Color.DarkGray;
             btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnExcluir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnExcluir.FillColor = Color.MidnightBlue;
             btnExcluir.Font = new Font("Segoe UI", 9F);
             btnExcluir.ForeColor = Color.White;
-            btnExcluir.Location = new Point(391, 52);
+            btnExcluir.Location = new Point(375, 39);
+            btnExcluir.Margin = new Padding(3, 2, 3, 2);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnExcluir.Size = new Size(163, 56);
+            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnExcluir.Size = new Size(111, 42);
             btnExcluir.TabIndex = 5;
             btnExcluir.Text = "Excluir";
             btnExcluir.Click += btnExcluir_Click;
             // 
             // frmMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(btnExcluir);
             Controls.Add(btnEditar);
             Controls.Add(guna2HtmlLabel2);
@@ -148,7 +150,6 @@
             Controls.Add(btnNovo);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmMenu";
             Text = "frmMenu";
             Load += frmMenu_Load;

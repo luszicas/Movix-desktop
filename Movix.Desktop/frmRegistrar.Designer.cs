@@ -53,14 +53,13 @@
             txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmail.Font = new Font("Segoe UI", 9F);
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Location = new Point(244, 51);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Location = new Point(364, 32);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderForeColor = Color.Black;
             txtEmail.PlaceholderText = "Email";
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtEmail.Size = new Size(286, 60);
+            txtEmail.Size = new Size(250, 45);
             txtEmail.TabIndex = 0;
             txtEmail.TextChanged += txtEmail_TextChanged;
             // 
@@ -75,14 +74,13 @@
             txtSenha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenha.Font = new Font("Segoe UI", 9F);
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenha.Location = new Point(244, 142);
-            txtSenha.Margin = new Padding(3, 4, 3, 4);
+            txtSenha.Location = new Point(364, 96);
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderForeColor = Color.Black;
             txtSenha.PlaceholderText = "Senha";
             txtSenha.SelectedText = "";
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtSenha.Size = new Size(286, 60);
+            txtSenha.Size = new Size(250, 45);
             txtSenha.TabIndex = 1;
             txtSenha.TextChanged += txtSenha_TextChanged;
             // 
@@ -97,14 +95,13 @@
             txtConfirmarSenha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConfirmarSenha.Font = new Font("Segoe UI", 9F);
             txtConfirmarSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmarSenha.Location = new Point(244, 237);
-            txtConfirmarSenha.Margin = new Padding(3, 4, 3, 4);
+            txtConfirmarSenha.Location = new Point(364, 173);
             txtConfirmarSenha.Name = "txtConfirmarSenha";
             txtConfirmarSenha.PlaceholderForeColor = Color.Black;
             txtConfirmarSenha.PlaceholderText = "COnfirmr Senha";
             txtConfirmarSenha.SelectedText = "";
             txtConfirmarSenha.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtConfirmarSenha.Size = new Size(286, 60);
+            txtConfirmarSenha.Size = new Size(250, 45);
             txtConfirmarSenha.TabIndex = 2;
             txtConfirmarSenha.TextChanged += txtConfirmarSenha_TextChanged;
             // 
@@ -117,26 +114,29 @@
             btnRegistrar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnRegistrar.Font = new Font("Segoe UI", 9F);
             btnRegistrar.ForeColor = Color.White;
-            btnRegistrar.Location = new Point(274, 321);
+            btnRegistrar.Location = new Point(387, 242);
+            btnRegistrar.Margin = new Padding(3, 2, 3, 2);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnRegistrar.Size = new Size(225, 56);
+            btnRegistrar.Size = new Size(197, 42);
             btnRegistrar.TabIndex = 3;
             btnRegistrar.Text = "criar";
             btnRegistrar.Click += btnRegistrar_Click;
             // 
             // frmRegistrar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(674, 338);
             Controls.Add(btnRegistrar);
             Controls.Add(txtConfirmarSenha);
             Controls.Add(txtSenha);
             Controls.Add(txtEmail);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmRegistrar";
             Text = "frmRegistrar";
+            Load += frmRegistrar_Load;
             ResumeLayout(false);
         }
 
