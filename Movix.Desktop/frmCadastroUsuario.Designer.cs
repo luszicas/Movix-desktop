@@ -38,17 +38,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroUsuario));
             txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txtEmail
             // 
             txtEmail.BorderColor = Color.MidnightBlue;
-            txtEmail.BorderRadius = 4;
+            txtEmail.BorderRadius = 7;
             txtEmail.CustomizableEdges = customizableEdges1;
             txtEmail.DefaultText = "";
             txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -59,7 +62,7 @@
             txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmail.Font = new Font("Segoe UI", 9F);
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Location = new Point(197, 116);
+            txtEmail.Location = new Point(41, 132);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderForeColor = Color.White;
             txtEmail.PlaceholderText = "Email";
@@ -72,6 +75,7 @@
             // txtUsername
             // 
             txtUsername.BorderColor = Color.MidnightBlue;
+            txtUsername.BorderRadius = 7;
             txtUsername.CustomizableEdges = customizableEdges3;
             txtUsername.DefaultText = "";
             txtUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -82,7 +86,7 @@
             txtUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsername.Font = new Font("Segoe UI", 9F);
             txtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUsername.Location = new Point(197, 185);
+            txtUsername.Location = new Point(41, 201);
             txtUsername.Name = "txtUsername";
             txtUsername.PlaceholderForeColor = Color.White;
             txtUsername.PlaceholderText = "Username";
@@ -95,6 +99,7 @@
             // txtSenha
             // 
             txtSenha.BorderColor = Color.MidnightBlue;
+            txtSenha.BorderRadius = 7;
             txtSenha.CustomizableEdges = customizableEdges5;
             txtSenha.DefaultText = "";
             txtSenha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -105,7 +110,7 @@
             txtSenha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenha.Font = new Font("Segoe UI", 9F);
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenha.Location = new Point(197, 251);
+            txtSenha.Location = new Point(41, 267);
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderForeColor = Color.White;
             txtSenha.PlaceholderText = "Senha";
@@ -113,12 +118,14 @@
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtSenha.Size = new Size(250, 45);
             txtSenha.TabIndex = 2;
+            txtSenha.UseSystemPasswordChar = true;
             txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // guna2ComboBox1
             // 
             guna2ComboBox1.BackColor = Color.Transparent;
             guna2ComboBox1.BorderColor = Color.MidnightBlue;
+            guna2ComboBox1.BorderRadius = 7;
             guna2ComboBox1.CustomizableEdges = customizableEdges7;
             guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
             guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -128,7 +135,7 @@
             guna2ComboBox1.Font = new Font("Segoe UI", 10F);
             guna2ComboBox1.ForeColor = Color.FromArgb(68, 88, 112);
             guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Location = new Point(197, 318);
+            guna2ComboBox1.Location = new Point(41, 334);
             guna2ComboBox1.Margin = new Padding(3, 2, 3, 2);
             guna2ComboBox1.Name = "guna2ComboBox1";
             guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -147,7 +154,7 @@
             btnSalvar.FillColor = Color.DimGray;
             btnSalvar.Font = new Font("Segoe UI", 9F);
             btnSalvar.ForeColor = Color.White;
-            btnSalvar.Location = new Point(269, 381);
+            btnSalvar.Location = new Point(108, 388);
             btnSalvar.Margin = new Padding(3, 2, 3, 2);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -156,21 +163,33 @@
             btnSalvar.Text = "Salvar";
             btnSalvar.Click += btnSalvar_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(51, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(222, 141);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
             // frmCadastroUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(700, 491);
+            ClientSize = new Size(332, 453);
+            Controls.Add(txtEmail);
+            Controls.Add(pictureBox1);
             Controls.Add(btnSalvar);
             Controls.Add(guna2ComboBox1);
             Controls.Add(txtSenha);
             Controls.Add(txtUsername);
-            Controls.Add(txtEmail);
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmCadastroUsuario";
             Text = "frmCadastroUsuario";
             Load += frmCadastroUsuario_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -181,5 +200,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
+        private PictureBox pictureBox1;
     }
 }

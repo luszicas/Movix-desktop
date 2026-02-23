@@ -70,7 +70,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(50, 119);
+            guna2DataGridView1.Location = new Point(50, 92);
             guna2DataGridView1.Margin = new Padding(3, 2, 3, 2);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersVisible = false;
@@ -110,16 +110,16 @@
             btnNovoUsuario.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNovoUsuario.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnNovoUsuario.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnNovoUsuario.FillColor = Color.MidnightBlue;
+            btnNovoUsuario.FillColor = Color.Green;
             btnNovoUsuario.Font = new Font("Segoe UI", 9F);
             btnNovoUsuario.ForeColor = Color.White;
-            btnNovoUsuario.Location = new Point(529, 36);
+            btnNovoUsuario.Location = new Point(547, 23);
             btnNovoUsuario.Margin = new Padding(3, 2, 3, 2);
             btnNovoUsuario.Name = "btnNovoUsuario";
             btnNovoUsuario.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnNovoUsuario.Size = new Size(117, 42);
+            btnNovoUsuario.Size = new Size(97, 42);
             btnNovoUsuario.TabIndex = 1;
-            btnNovoUsuario.Text = "Novo";
+            btnNovoUsuario.Text = "+ Novo Usuário";
             btnNovoUsuario.Click += btnNovoUsuario_Click;
             // 
             // bntEditar
@@ -130,14 +130,14 @@
             bntEditar.DisabledState.CustomBorderColor = Color.DarkGray;
             bntEditar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             bntEditar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            bntEditar.FillColor = Color.MidnightBlue;
+            bntEditar.FillColor = Color.Gold;
             bntEditar.Font = new Font("Segoe UI", 9F);
-            bntEditar.ForeColor = Color.White;
-            bntEditar.Location = new Point(390, 36);
+            bntEditar.ForeColor = Color.Black;
+            bntEditar.Location = new Point(433, 23);
             bntEditar.Margin = new Padding(3, 2, 3, 2);
             bntEditar.Name = "bntEditar";
             bntEditar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            bntEditar.Size = new Size(119, 42);
+            bntEditar.Size = new Size(99, 42);
             bntEditar.TabIndex = 2;
             bntEditar.Text = "Editar";
             bntEditar.Click += bntEditar_Click;
@@ -150,14 +150,14 @@
             btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnExcluir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExcluir.FillColor = Color.MidnightBlue;
+            btnExcluir.FillColor = Color.Maroon;
             btnExcluir.Font = new Font("Segoe UI", 9F);
             btnExcluir.ForeColor = Color.White;
-            btnExcluir.Location = new Point(247, 36);
+            btnExcluir.Location = new Point(306, 23);
             btnExcluir.Margin = new Padding(3, 2, 3, 2);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnExcluir.Size = new Size(126, 42);
+            btnExcluir.Size = new Size(106, 42);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Desativar";
             btnExcluir.Click += btnExcluir_Click;
@@ -167,7 +167,7 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 10F);
             guna2HtmlLabel1.ForeColor = SystemColors.Highlight;
-            guna2HtmlLabel1.Location = new Point(50, 25);
+            guna2HtmlLabel1.Location = new Point(50, 23);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(86, 19);
             guna2HtmlLabel1.TabIndex = 4;
@@ -187,7 +187,7 @@
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI", 14F);
             guna2HtmlLabel3.ForeColor = Color.White;
-            guna2HtmlLabel3.Location = new Point(50, 51);
+            guna2HtmlLabel3.Location = new Point(50, 49);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(76, 27);
             guna2HtmlLabel3.TabIndex = 6;
@@ -198,7 +198,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(700, 407);
+            ClientSize = new Size(687, 385);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2HtmlLabel1);

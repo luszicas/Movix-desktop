@@ -59,7 +59,7 @@
             btnGerenciarUsuarios.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnGerenciarUsuarios.Size = new Size(123, 42);
             btnGerenciarUsuarios.TabIndex = 1;
-            btnGerenciarUsuarios.Text = "Usuarios";
+            btnGerenciarUsuarios.Text = "Usuários";
             btnGerenciarUsuarios.Click += btnGerenciarUsuarios_Click;
             // 
             // btnGerenciarFilmes
@@ -95,8 +95,8 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(178, 97);
-            guna2TextBox1.Margin = new Padding(4, 4, 4, 4);
+            guna2TextBox1.Location = new Point(178, 94);
+            guna2TextBox1.Margin = new Padding(4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";

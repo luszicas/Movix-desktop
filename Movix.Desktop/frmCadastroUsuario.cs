@@ -18,22 +18,22 @@ namespace Movix.Desktop
 			_idUsuarioEditando = idUsuario;
 		}
 
-		private async void frmCadastroUsuario_Load(object sender, EventArgs e)
-		{
-			guna2ComboBox1.Items.Clear();
-			guna2ComboBox1.Items.Add("Admin");
-			guna2ComboBox1.Items.Add("Gerente");
-			guna2ComboBox1.Items.Add("Usuário");
-			guna2ComboBox1.SelectedIndex = -1;
+        private async void frmCadastroUsuario_Load(object sender, EventArgs e)
+        {
+            guna2ComboBox1.Items.Clear();
+            guna2ComboBox1.Items.Add("Admin");
+            guna2ComboBox1.Items.Add("Gerente");
+            guna2ComboBox1.Items.Add("Usuario"); // REMOVIDO O ACENTO AQUI
+            guna2ComboBox1.SelectedIndex = -1;
 
-			if (!string.IsNullOrEmpty(_idUsuarioEditando))
-			{
-				await CarregarDadosParaEdicao();
-				txtSenha.PlaceholderText = "Deixe em branco para não alterar";
-			}
-		}
+            if (!string.IsNullOrEmpty(_idUsuarioEditando))
+            {
+                await CarregarDadosParaEdicao();
+                txtSenha.PlaceholderText = "Deixe em branco para não alterar";
+            }
+        }
 
-		private async Task CarregarDadosParaEdicao()
+        private async Task CarregarDadosParaEdicao()
 		{
 			using (var client = new HttpClient())
 			{
@@ -54,21 +54,22 @@ namespace Movix.Desktop
 
 		private async void btnSalvar_Click(object sender, EventArgs e)
 		{
-			if (string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(txtUsername.Text))
-			{
-				MessageBox.Show("Preencha os campos obrigatórios!");
-				return;
-			}
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                MessageBox.Show("Preencha os campos obrigatórios!");
+                return;
+            }
 
-			var dados = new
-			{
-				Email = txtEmail.Text,
-				Username = txtUsername.Text,
-				Senha = txtSenha.Text,
-				Perfil = guna2ComboBox1.SelectedItem?.ToString() ?? "Usuário"
-			};
+            var dados = new
+            {
+                Email = txtEmail.Text,
+                Username = txtUsername.Text,
+                Senha = txtSenha.Text,
+                // Garante que envie "Usuario" se não houver nada selecionado
+                Perfil = guna2ComboBox1.SelectedItem?.ToString() ?? "Usuario"
+            };
 
-			using (var client = new HttpClient())
+            using (var client = new HttpClient())
 			{
 				client.BaseAddress = new Uri(ApiBaseUrl);
 				try
@@ -99,8 +100,9 @@ namespace Movix.Desktop
 				}
 			}
 		}
+       
 
-		private void txtEmail_TextChanged(object sender, EventArgs e) { }
+        private void txtEmail_TextChanged(object sender, EventArgs e) { }
 		private void txtUsername_TextChanged(object sender, EventArgs e) { }
 		private void txtSenha_TextChanged(object sender, EventArgs e) { }
 		private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e) { }

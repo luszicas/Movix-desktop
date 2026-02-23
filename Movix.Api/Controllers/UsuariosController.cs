@@ -54,6 +54,8 @@ namespace Movix.Api.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Post([FromBody] CriarUsuarioRequest model)
 		{
+
+
 			try
 			{
 				var user = new ApplicationUser
@@ -123,45 +125,49 @@ namespace Movix.Api.Controllers
 				Id = user.Id.ToString(),
 				Username = user.UserName ?? string.Empty,
 				Email = user.Email ?? string.Empty,
-				Perfil = roles.FirstOrDefault() ?? "Usuário",
+				Perfil = roles.FirstOrDefault() ?? "Usuario",
 				IsActive = user.IsActive
 			});
 		}
 
-		// PUT: api/usuarios/{id} (PARA SALVAR A EDIÇÃO)
-		[HttpPut("{id}")]
-		public async Task<IActionResult> Put(string id, [FromBody] CriarUsuarioRequest model)
-		{
-			var user = await _userManager.FindByIdAsync(id);
-			if (user == null) return NotFound();
+        // PUT: api/usuarios/{id} (PARA SALVAR A EDIÇÃO)
+        [HttpPut("{id}")]
+public async Task<IActionResult> Put(string id, [FromBody] CriarUsuarioRequest model)
+{
+    var user = await _userManager.FindByIdAsync(id);
+    if (user == null) return NotFound();
 
-			// Atualiza os dados básicos
-			user.Email = model.Email;
-			user.UserName = model.Username;
+    user.Email = model.Email;
+    user.UserName = model.Username;
 
-			// Se o usuário digitou uma senha nova, a gente troca
-			if (!string.IsNullOrWhiteSpace(model.Senha))
-			{
-				var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-				await _userManager.ResetPasswordAsync(user, token, model.Senha);
-			}
+    if (!string.IsNullOrWhiteSpace(model.Senha))
+    {
+        var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+        await _userManager.ResetPasswordAsync(user, token, model.Senha);
+    }
 
-			var result = await _userManager.UpdateAsync(user);
+    var result = await _userManager.UpdateAsync(user);
 
-			if (result.Succeeded)
-			{
-				// Atualiza o perfil (Remove o antigo e põe o novo)
-				var currentRoles = await _userManager.GetRolesAsync(user);
-				await _userManager.RemoveFromRolesAsync(user, currentRoles);
-				await _userManager.AddToRoleAsync(user, model.Perfil);
+    if (result.Succeeded)
+    {
+        var currentRoles = await _userManager.GetRolesAsync(user);
+        await _userManager.RemoveFromRolesAsync(user, currentRoles);
+        
+        // --- TRAVA DE SEGURANÇA AQUI ---
+        // Só tenta adicionar o perfil se ele for Admin, Gerente ou Usuario (sem acento)
+        // E se o perfil realmente existir no sistema
+        if (!string.IsNullOrEmpty(model.Perfil))
+        {
+             await _userManager.AddToRoleAsync(user, model.Perfil);
+        }
 
-				return Ok(new { message = "Usuário atualizado com sucesso!" });
-			}
+        return Ok(new { message = "Usuario atualizado com sucesso!" });
+    }
 
-			return BadRequest(result.Errors.Select(e => e.Description));
-		}
-		// --- DTOs (Data Transfer Objects) ---
-		public class CriarUsuarioRequest
+    return BadRequest(result.Errors.Select(e => e.Description));
+}
+        // --- DTOs (Data Transfer Objects) ---
+        public class CriarUsuarioRequest
 		{
 			public string Email { get; set; } = string.Empty;
 			public string Username { get; set; } = string.Empty;

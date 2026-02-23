@@ -67,6 +67,7 @@
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtSenha.Size = new Size(200, 36);
             txtSenha.TabIndex = 0;
+            txtSenha.UseSystemPasswordChar = true;
             // 
             // txtEmail
             // 

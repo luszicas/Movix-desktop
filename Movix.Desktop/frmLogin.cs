@@ -10,20 +10,7 @@ namespace Movix.Desktop
             InitializeComponent();
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private async void btnEntrar_Click(object sender, EventArgs e)
         {
@@ -68,35 +55,7 @@ namespace Movix.Desktop
             }
         }
 
-        private void guna2ShadowPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ShadowPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox2_Click_1(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void txtEmail_TextChanged_1(object sender, EventArgs e)
         {
@@ -108,20 +67,8 @@ namespace Movix.Desktop
 
         }
 
-        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
-        {
+      
 
-        }
-
-		private void btnCriarConta_Click(object sender, EventArgs e)
-		{
-			// 1. Instancia a tela de registro que você acabou de criar
-			frmRegistrar telaRegistro = new frmRegistrar();
-
-			// 2. Abre como um diálogo (trava a tela de login no fundo)
-			// Quando o usuário clicar no seu "btnCriar" (que tem o this.Close()),
-			// esta linha termina e o código continua
-			telaRegistro.ShowDialog();
-		}
+		
 	}
 }
